@@ -10,9 +10,9 @@ function App() {
       <Header></Header>
 
       <Routes>
-        <Route path="/" element={<profile />} />
-        <Route path="/:username" element={<profile />} />
-        <Route path="/:username/:reponame" element={<repo />} />
+        <Route path="/" element={<Profile />} />
+        <Route path="/:username" element={<Profile />} />
+        <Route path="/:username/:reponame" element={<Repo />} />
       </Routes>
 
       {/* <Footer></Footer> */}
