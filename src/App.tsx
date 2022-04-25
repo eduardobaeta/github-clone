@@ -10,8 +10,6 @@ function App() {
     <BrowserRouter>
       <Header></Header>
 
-      <h1>Rockeseat</h1>
-
       <Routes>
         <Route path="/" element={<Profile />} />
         <Route path="/:username" element={<Profile />} />
