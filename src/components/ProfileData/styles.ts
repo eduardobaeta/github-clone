@@ -7,17 +7,17 @@ export const Flex = styled.div`
     display: flex;
     align-items: center;
 
-    div{
+    > div{
         margin-left: 24px;
 
-        h1{
+        > h1{
             font-size: 26px;
             line-height: 1.25;
             color: var(--gray-dark);
             font-weight: 600;
         }
 
-        h2{
+        > h2{
             font-size: 20px;
             color: var(--username);
             font-weight: 300;
@@ -28,7 +28,7 @@ export const Flex = styled.div`
         flex-direction: column;
         align-items: flex-start;
 
-        div{
+        > div{
             margin-left: 0;
             margin-top: 16px;
         }
@@ -37,7 +37,10 @@ export const Flex = styled.div`
 
 export const Avatar = styled.img`
     width: 16%;
+    min-height: 100px;
+    min-width: 100px;
     border-radius: 50%;
+    flex-shrink: 0;
 
     @media(min-width: 768px){
         width: 100%;
@@ -50,12 +53,12 @@ export const Row = styled.ul`
     flex-wrap: wrap;
     margin: 20px 0px;
 
-    li{
+    > li{
         display: flex;
         align-items: center;
     }
 
-    span{
+    > span{
         font-size: 14px;
         color: var(--gray);
     }

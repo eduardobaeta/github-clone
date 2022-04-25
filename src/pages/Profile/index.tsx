@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, Main, LeftSide, RightSide } from './styles';
+import { Container, Main, LeftSide, RightSide, Repos } from './styles';
 
 import ProfileData from '../../components/ProfileData';
+import RepoCard from '../../components/RepoCard';
 
 const Profile: React.FC = () => {
     return (
@@ -11,7 +12,7 @@ const Profile: React.FC = () => {
                     <ProfileData
                         username={'eduardobrumassio'}
                         name={'Eduardo Brumassio'}
-                        avatarUrl={'https://media-exp1.licdn.com/dms/image/C4D03AQEetF4xXW18zg/profile-displayphoto-shrink_100_100/0/1600270160169?e=1656547200&v=beta&t=rDz_tsKYiVpWGHzE4TeUTrijyzlgNYIZvdXX_mJdPuM'}
+                        avatarUrl={'https://avatars.githubusercontent.com/u/60549284?v=4'}
                         followers={900}
                         following={7}
                         company={'Aspect'}
@@ -20,7 +21,24 @@ const Profile: React.FC = () => {
                         blog=""
                     />
                 </LeftSide>
-                <RightSide></RightSide>
+                <RightSide>
+                    <Repos>
+                        <h2>Random repos</h2>
+                        <div>
+                            {[1, 2, 3, 4, 5, 6].map(n => (
+                                <RepoCard
+                                    key={n}
+                                    username={'eduardobrumassio'}
+                                    reponame={'youtube-content'}
+                                    description={'Contains all of my youtube lessons code'}
+                                    language={'Javascript'}
+                                    stars={8}
+                                    forks={4}
+                                />
+                            ))}
+                        </div>
+                    </Repos>
+                </RightSide>
             </Main>
         </Container>
     );
