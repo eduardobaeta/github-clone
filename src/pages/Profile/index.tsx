@@ -1,13 +1,15 @@
 import React from 'react';
-import { Container, Main, LeftSide, RightSide, Repos } from './styles';
+import { Container, Main, LeftSide, RightSide, Repos, CalendarHeading } from './styles';
 
 import ProfileData from '../../components/ProfileData';
 import RepoCard from '../../components/RepoCard';
+import RandomCalendar from '../../components/RandomCalendar';
 
 const Profile: React.FC = () => {
     return (
         <Container>
             <Main>
+
                 <LeftSide>
                     <ProfileData
                         username={'eduardobrumassio'}
@@ -21,6 +23,7 @@ const Profile: React.FC = () => {
                         blog=""
                     />
                 </LeftSide>
+
                 <RightSide>
                     <Repos>
                         <h2>Random repos</h2>
@@ -38,6 +41,10 @@ const Profile: React.FC = () => {
                             ))}
                         </div>
                     </Repos>
+                    <CalendarHeading>
+                        Randon calendar (Do not represent actual data)
+                    </CalendarHeading>
+                    <RandomCalendar />
                 </RightSide>
             </Main>
         </Container>
