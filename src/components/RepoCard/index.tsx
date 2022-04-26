@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Container, Topside, RepoIcon, Botside, StarIcon, ForkIcon } from './styles';
 
 interface Props {
-    key: number;
+    key: string;
     username: string;
     reponame: string;
     description?: string;
@@ -21,7 +21,7 @@ const RepoCard: React.FC<Props> = ({
     stars,
     forks,
 }) => {
-    const languageClass = language ? language.toLowerCase() : 'other';
+    const languageClass = (language == 'JavaScript' || language == 'TypeScript') ? language.toLowerCase() : 'other';
 
     return (
         <Container>
